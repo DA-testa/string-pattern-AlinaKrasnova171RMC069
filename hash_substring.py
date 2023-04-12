@@ -15,12 +15,12 @@ def read_input():
     # this is the sample return, notice the rstrip function
     select = input()[0]
     if "I" in select:
-        pattern = input()
-        text = input()
+        pattern = input().rstrip()
+        text = input().rstrip()
     elif "F" in select:
-        with open('./test/06', 'r') as f:
-            pattern = f.readline()
-            text = f.readline()
+        with open('./tests/06', 'r') as f:
+            pattern = f.readline().rstrip()
+            text = f.readline().rstrip()
     return pattern, text
 
 def print_occurrences(output):
